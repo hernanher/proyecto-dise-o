@@ -1,43 +1,41 @@
-import React, { useState, useEffect } from "react";
-import Pinicio from "./components/pinicio";
-import Navbar from "./components/navbar";
-import TE from "./components/TE";
-import AC from "./components/AC";
-import EE from "./components/EE";
+import React, { useEffect, useState } from 'react';
+import './App.css';
+import Products from './Products';
+import Cart from './Cart';
+import Navi from './Navi';
+import Shop from './Shop';
+import About from './About';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import BC from './BC';
 
 
-const App = () => {
-  const [show, setShow] = useState(true);
-  const [cart, setCart] = useState([]);
 
-  const handleClick = (item) => {
-    if (cart.indexOf(item) !== -1) return;
-    setCart([...cart, item]);
-  };
-
-  const handleChange = (item, d) => {
-    const ind = cart.indexOf(item);
-    const arr = cart;
-    arr[ind].amount += d;
-
-    if (arr[ind].amount === 0) arr[ind].amount = 1;
-    setCart([...arr]);
-  };
-
+function App() {
 
   return (
-    <React.Fragment>
-      <Navbar setShow={setShow} size={cart.length} />
-      {show ? (
-        <Pinicio handleClick={handleClick} />
-      ) : (
-        <p />
-      )}
-      <EE />
-      <AC />
-      <TE />
-    </React.Fragment>
+      <Router>
+      <div className="App">
+        <Navi />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/shop" component={Shop} />
+          <Route path="/about" component={About} />
+          <Route path="/BC" component={BC} />
+          <Route path="/products" component={Products} />
+          <Route path="/cart" component={Cart} />
+        </Switch>
+    
+    </div>
+    </Router>
+
   );
-};
+}
+
+
+const Home = () => (
+  <div>
+  <BC/>
+  </div>
+);
 
 export default App;

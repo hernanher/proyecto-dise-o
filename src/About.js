@@ -1,6 +1,8 @@
+import React from 'react';
+import './App.css';
 import Accordion from 'react-bootstrap/Accordion';
 
-export default function AC() {
+function About () {
   return (
     <Accordion>
       <Accordion.Item eventKey="0">
@@ -24,3 +26,4 @@ lo mas pronta posible. Para mas detalles sobre devoluciones y reembolsos, ver el
     </Accordion>
   );
 }
+export default About;

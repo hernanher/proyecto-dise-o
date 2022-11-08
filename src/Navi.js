@@ -1,11 +1,28 @@
-import React from "react";
-import "./navbar.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import React, { useEffect, useState } from 'react';
 
-const NB = ({ setShow, size }) => {
+
+
+const Navi = ({setShow, size }) => {
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart') || []);
+  const [cart, setCart] = useState(cartFromLocalStorage);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
+
+  const getCartTotal = () => {
+    return cart.reduce(
+      (sum, { quantity }) => sum + quantity,
+      0
+    );
+  };
+
+
   return (
 <Navbar class="light" expand="lg">
       <Container fluid>
@@ -17,8 +34,12 @@ const NB = ({ setShow, size }) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link aria-current="page" href="#Inicio"> Inicio</Nav.Link>
-            <Nav.Link href="https://www.instagram.com/plusultralibreria/">Instagram</Nav.Link>
+            <Nav.Link aria-current="page" href="/">Home </Nav.Link>
+            <Nav.Link href="/shop">shop</Nav.Link>
+            <Nav.Link href="/about">about</Nav.Link>
+            <Nav.Link href="/BC">BC</Nav.Link>
+            <Nav.Link href="/products">Productos</Nav.Link>
+            <Nav.Link href="/cart">Cart</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Tienda</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -33,12 +54,15 @@ const NB = ({ setShow, size }) => {
             Proximamente
             </Nav.Link>
           </Nav>
-            <Nav.Link className="cart" onClick={() => setShow(false)}>Carro ({size})</Nav.Link>
+
+        <Nav.Link href="/products" > Go to Cart ({getCartTotal()})  </Nav.Link>
+        <Nav.Link href="/shop" > View Products </Nav.Link>
+      
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
 
-export default NB;
+export default Navi;
 
