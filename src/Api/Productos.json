@@ -1,0 +1,63 @@
+{
+   "Productos": [
+    {
+        "id": "01",
+        "price": "11500",
+        "amount": "0",
+        "editorial":"Milky Way",
+        "name": "Beastars",
+        "img1": "https://879ed873-madman-com-au.akamaized.net/media/Releases/63405/63405-2649475.jpg",
+        "img2": "https://i0.wp.com/www.monstersandcritics.com/wp-content/uploads/2019/10/BEASTARS-Manga-Legoshi-Character-1024x773.jpg?resize=780%2C589&ssl=1"
+    },
+
+    {
+        "id": "02",
+        "price": "11000",
+        "amount": "0",
+        "editorial":"Norma",
+        "name": "Las Quintillizas",
+        "img1": "https://www.normaeditorial.com/upload/media/albumes/0001/07/55e0f3a21e88164e5590ededd30994acf195d2bd.jpeg",
+        "img2": "https://patrullaroja.cl/wp-content/uploads/2021/04/Quintillizas1-1024x576.jpg"
+    },
+
+    {
+        "id": "03",
+        "price": "10000",
+        "amount": "0",
+        "editorial":"Ivrea España",
+        "name": "Aoha Ride",
+        "img1": "https://http2.mlstatic.com/D_NQ_NP_970275-MLC44311746067_122020-O.jpg",
+        "img2": "https://i1.whakoom.com/small/04/02/267b157b44694dd694f8f21f2c0a0227.jpg"
+    },
+    
+    {
+        "id": "04",
+        "price": "29500",
+        "amount": "0",
+        "editorial":"Smash",
+        "name": "Absolute Batman: The killing Joke",
+        "img1": "https://i0.wp.com/taylorcomics.cl/wp-content/uploads/2021/01/Absolute-killing-joke-1_1024x1024@2x.jpg?fit=468%2C700&ssl=1",
+        "img2": "https://media.instocktrades.com/large/JAN180393.jpg"
+    },
+    
+    {
+        "id": "05",
+        "price": "11000",
+        "amount": "0",
+        "editorial":"ECC",
+        "name": "El leon de Marzo",
+        "img1": "https://otakuteca.com/images/books/cover/6177567b7feb4.jpg",
+        "img2": "https://pbs.twimg.com/media/E_Ch6EvX0AEjdgQ.jpg"
+    },
+
+    {
+        "id": "06",
+        "price": "10500",
+        "amount": "0",
+        "editorial":"Smash",
+        "name": "House of M. Bestsellers",
+        "img1": "https://dam.smashmexico.com.mx/wp-content/uploads/2020/07/house-of-m-1-1.jpg",
+        "img2": "https://m.media-amazon.com/images/I/81ZQ6cJ4B2L.jpg"
+    }
+   ]
+}
