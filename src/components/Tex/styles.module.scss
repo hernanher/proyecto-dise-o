@@ -1,0 +1,23 @@
+
+.carousel-item img {
+
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+}
+
+  .carousel-item {
+    display: grid ;
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
